@@ -111,7 +111,7 @@ public class TagFlowLayout extends FlowLayout implements TagAdapter.OnDataChange
     {
         removeAllViews();
         TagAdapter adapter = mTagAdapter;
-        TagView tagViewContainer = null;
+        TagView tagViewContainer;
         HashSet preCheckedList = mTagAdapter.getPreCheckedList();
         for (int i = 0; i < adapter.getCount(); i++)
         {

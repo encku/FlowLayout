@@ -29,6 +29,25 @@ public abstract class TagAdapter<T>
         void onChanged();
     }
 
+    public void append(T t){
+        if (mTagDatas != null){
+            mTagDatas.add(t);
+        }
+        notifyDataChanged();
+    }
+
+    public void add(int index, T t){
+        if (mTagDatas != null){
+            mTagDatas.add(index, t);
+        }
+        notifyDataChanged();
+    }
+
+    public void setData(List<T> list){
+        mTagDatas = list;
+        notifyDataChanged();
+    }
+
     void setOnDataChangedListener(OnDataChangedListener listener)
     {
         mOnDataChangedListener = listener;
